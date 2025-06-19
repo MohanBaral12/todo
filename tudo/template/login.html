@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Tudo App</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(120deg, #e3f2fd 0%, #bbdefb 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .login-container {
+      background: #fff;
+      padding: 2.5rem 2rem 2rem 2rem;
+      border-radius: 14px;
+      box-shadow: 0 4px 24px rgba(25, 118, 210, 0.10);
+      width: 100%;
+      max-width: 370px;
+      animation: fadeIn 0.8s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .login-container h1 {
+      color: #1976d2;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      letter-spacing: 1px;
+    }
+    .login-container label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #1976d2;
+      letter-spacing: 0.5px;
+    }
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1.2rem;
+      border: 1.5px solid #90caf9;
+      border-radius: 6px;
+      font-size: 1rem;
+      background: #f7fbff;
+      transition: border 0.2s, box-shadow 0.2s;
+      box-sizing: border-box;
+    }
+    .login-container input:focus {
+      border: 1.5px solid #1976d2;
+      outline: none;
+      box-shadow: 0 0 0 2px #bbdefb;
+      background: #fff;
+    }
+    .login-container button {
+      background: linear-gradient(90deg, #1976d2 60%, #64b5f6 100%);
+      color: #fff;
+      border: none;
+      padding: 0.8rem 2.2rem;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+      display: block;
+      margin: 0 auto;
+      letter-spacing: 1px;
+    }
+    .login-container button:hover {
+      background: linear-gradient(90deg, #1565c0 60%, #42a5f5 100%);
+      box-shadow: 0 4px 16px rgba(25, 118, 210, 0.13);
+    }
+    .login-container .register-link {
+      text-align: center;
+      margin-top: 1.2rem;
+      font-size: 0.98rem;
+    }
+    .login-container .register-link a {
+      color: #1976d2;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .login-container .register-link a:hover {
+      color: #0d47a1;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <!-- Back Icon -->
+    <a href="javascript:history.back()" style="display:inline-block;margin-bottom:1rem;text-decoration:none;color:#1976d2;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;">
+        <path d="M15 18l-6-6 6-6" stroke="#1976d2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span style="vertical-align:middle;font-size:1rem;font-weight:500;"></span>
+    </a>
+    <h1>Login</h1>
+    <form method="post" autocomplete="off">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required placeholder="Enter your username">
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required placeholder="Enter your password">
+
+      <button type="submit">Login</button>
+    </form>
+    <div class="register-link">
+      Don't have an account? <a href="register/">Register</a>
+    </div>
+  </div>
+</body>
+</html>
